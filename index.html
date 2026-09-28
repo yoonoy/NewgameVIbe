@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Корзинка: лови свои фрукты</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game">
+    <header class="hud">
+      <div class="hud-item">
+        <span class="hud-label">Время</span>
+        <span class="hud-value" id="time">40</span>
+      </div>
+      <div class="hud-item">
+        <span class="hud-label">Счёт</span>
+        <span class="hud-value"><span id="score">0</span>/<span id="goal">10</span></span>
+      </div>
+      <div class="hud-item">
+        <span class="hud-label">Жизни</span>
+        <span class="hud-value" id="lives">♥♥♥</span>
+      </div>
+    </header>
+
+    <div class="target" id="target-box">
+      <span class="target-label">Собирай:</span>
+      <span class="target-emoji" id="target-emoji">🍎</span>
+      <span class="target-name" id="target-name">яблоки</span>
+    </div>
+
+    <div class="stage">
+      <canvas id="game" width="360" height="480"></canvas>
+      <button id="mute" class="mute" type="button" aria-label="Выключить музыку" title="Музыка">🔊</button>
+
+      <section class="overlay" id="overlay">
+        <h1 id="overlay-title">Корзинка 🧺</h1>
+        <p id="overlay-text">
+          Подставляйте корзину под <b>нужные фрукты</b>. Какие именно — написано в розовой полосе сверху.
+          Фрукт меняется каждые 7 секунд.
+        </p>
+        <p class="rules">
+          Победа: собрать <b>10</b> фруктов за <b>40</b> секунд.<br>
+          Поймали не тот фрукт — минус жизнь. Три жизни — и игра окончена.
+        </p>
+        <button id="start" type="button">Играть</button>
+        <p class="hint">Стрелки ← → или A / D. На телефоне — двигайте пальцем.</p>
+      </section>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
