@@ -360,3 +360,5 @@ score = 0; lives = CONFIG.lives; timeLeft = CONFIG.time; targetIdx = 0; fruits =
 updateHud();
 showTarget(false);
 render();
+
+
